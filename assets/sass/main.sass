@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Sora:wght@600;700&display=swap')
+$border-s-color: #FFFFFF26
+$border-f-color: #FFFFFF15
+$list1: $border-s-color, $border-f-color
+
+@mixin gradient($direction, $list) 
+  background: linear-gradient($direction, $list) 
+
+    
+
+::-webkit-scrollbar 
+  width: 7px
+
+ 
+::-webkit-scrollbar-track 
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+
+::-webkit-scrollbar-thumb 
+  background-color: var(--bg)
+  outline: 1px solid #FFFFFF15
+  border-radius: 14px 
+
+*
+    line-height: 1.2em !important
+
+body 
+    background: var(--bg)
+    font-weight: 400
+    font-family: 'Poppins', sans-serif
+    color: var(--ft)
+h1,h2,h3,h4,h5,h6
+    font-family: 'Sora', sans-serif
+.container 
+    max-width: 1200px
+    width: 100%
+    margin: 0 auto
+.header
+    position: relative
+    .header-elipse 
+        position: absolute
+        background: rgba(120, 120, 120, 0.4)
+        filter: blur(212px)
+        top: -450px
+        left: -350px
+        width: 718px
+        height: 718px
+.nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 30px 0
+    .nav-list 
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 249px
+        .nav-list__item
+            padding-bottom: 7px
+            border-bottom: 2px solid rgba(255, 255, 255, 0)
+            transition: all .5s ease
+            &:hover
+                border-bottom: 2px solid var(--bl)
+                transition: all .5s ease
+            &:hover .nav-list__item-link
+                color: var(--w)
+                transition: all .5s ease
+            .nav-list__item-link
+                font-size: 16px
+                color: var(--ft)
+        .nav-list__item.active
+            border-bottom: 2px solid var(--bl)
+            transition: all .5s ease
+            color: var(--w)
+        .nav-list__item.active .nav-list__item-link
+            color: var(--w)
+
+.first
+    padding: 90px 0
+    position: relative
+    .first-bottom-elipse
+        position: absolute
+        background: rgba(120, 120, 120, 0.4)
+        filter: blur(212px)
+        bottom: -200px
+        left: -100px
+        width: 288px
+        height: 288px
+    .hero
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .hero-left
+            position: relative
+            .hero-left-elipse
+                position: absolute
+                width: 204px
+                height: 204px
+                top: -50px
+                right: -50px
+                background: rgba(187, 110, 62, 0.2)
+                filter: blur(95px)
+            .hero-left__img
+                border-radius: 14px
+                padding: 20px
+                @include gradient(to bottom, $list1)
+        .hero-right
+            width: 574px
+            .hero-right-wrapper
+                display: flex
+                flex-direction: column
+                gap: 24px
+                margin-bottom: 48px
+                .hero-right-title
+                    font-size: 66px
+                    font-weight: 700
+                    color: var(--w)
+                .hero-right-text
+                    font-size: 16px
+                    color: var(--ft)
+            .hero-right-inner
+                display: flex
+                margin-bottom: 76px
+                .hero-right-inner-search
+                    background: var(--w)
+                    padding: 20px
+                    border-radius: 14px
+                    width: 579px
+                    display: flex
+                    justify-content: space-between
+                    .hero-right-inner-search__first-loc, .hero-right-inner-search__second-loc
+                        padding: 10px
+                        border: 1px solid var(--ft-2)
+                        border-radius: 50%
+                    .hero-right-inner-search__first, .hero-right-inner-search__second
+                        display: flex
+                        align-items: center
+                        gap: 15px
+                        transition: all .5s ease
+                        &:hover
+                            opacity: .8
+                            transition: all .5s ease
+                        .hero-right-inner-search__first-wrapper, .hero-right-inner-search__second-wrapper
+                                .hero-right-inner-search__first-wrapper-location, .hero-right-inner-search__second-wrapper-location
+                                    display: flex
+                                    flex-direction: column
+                        .select-first, .select-second
+                            position: relative
+                            &::before
+                                position: absolute
+                                content: ""
+                                width: 6px
+                                height: 6px
+                                top: 5px
+                                right: 0
+                                border: 1px solid var(--ft)
+                                border-top: 1px solid transparent
+                                border-right: 1px solid transparent
+                                transform: rotate(-45deg)
+                                transition: all .5s 
+                        .select-first.active, .select-second.active
+                            &::before
+                                position: absolute
+                                content: ""
+                                width: 6px
+                                height: 6px
+                                top: 10px
+                                right: 0
+                                border: 1px solid var(--ft)
+                                transition: all .5s ease
+                                border-top: 1px solid transparent
+                                border-right: 1px solid transparent
+                                transform: rotate(-225deg)
+
+                        .location-inp, .location-inp-second
+                            width: 124px
+
+                .hero-right-inner-search-btn
+                    .btn
+                        background: var(--bl)
+                        color: var(--w)
+                        font-size: 16px
+                        padding: 14px 30px
+                        border-radius: 8px
+            
+            .hero-right-recognition
+                display: flex
+                width: 455px
+                justify-content: space-between
+                align-items: center
+                .hero-right-recognition__item
+                    .hero-right-recognition__item-title
+                        font-size: 36px
+                        font-weight: 600
+                        color: var(--w)
+                        span 
+                            color: var(--ft-3)
+                    .hero-right-recognition__item-text
+                        color: var(--ft-g)
+                        font-size: 16px
+
+
+        
+
+        
