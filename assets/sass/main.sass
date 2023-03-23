@@ -313,6 +313,52 @@ h1,h2,h3,h4,h5,h6
                     display: flex
                     align-items: center
                     gap: 8px
+/* THIRD */
+
+.third
+    padding: 140px 0 106px
+    .services
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .services-left
+            position: relative
+            .services-left-img
+                border-radius: 14px
+                padding: 20px
+                @include gradient(to bottom, $list1)
+            .services-left-elipse
+                position: absolute
+                top: 30%
+                left: 0
+                width: 408px
+                height: 408px
+                background: rgba(11, 134, 83, 0.3)
+                filter: blur(212px)
+
+        .services-right
+            width: 471px
+            display: grid
+            gap: 40px
+            .section_services
+                display: grid
+                gap: 20px
+                .section-inner-text
+                    font-size: 16px
+                    color: var(--ft)
+            .services-right__review
+                display: grid
+                grid-template-columns: 179px 179px
+                gap: 34px 28px
+                .services-right__review-item
+                    display: flex
+                    gap: 8px
+                    align-items: center
+                    .services-right__review-item__text
+                        color: var(--w)
+                        font-size: 18px
+                        font-weight: 500
+
 
 
 
