@@ -34,6 +34,60 @@ h1,h2,h3,h4,h5,h6
     max-width: 1200px
     width: 100%
     margin: 0 auto
+.btn
+    background: var(--bl)
+    color: var(--w)
+    font-size: 16px
+    font-weight: 500
+    padding: 14px 30px
+    border-radius: 8px
+    display: block
+    transition: all .5s ease
+    border: 1px solid  var(--bl)
+    &:hover
+        transition: all .5s ease
+        background: var(--bl) !important
+        color: var(--w)
+        -webkit-box-shadow: 0px 0px 24px 7px var(--bl)
+        -moz-box-shadow: 0px 0px 24px 7px var(--bl)
+        box-shadow: 0px 0px 24px 7px var(--bl)
+
+.section
+    display: grid
+    gap: 16px
+    .section-subtitle
+        font-size: 18px
+        font-weight: 500
+        color: var(--bl)
+    .section-inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .section-inner-title
+            font-size: 48px
+            font-weight: 600
+            color: var(--w)
+        .section-inner-link
+            display: flex
+            align-items: center
+            font-size: 18px
+            color: var(--ft-2)
+            transition: all .5s ease
+            gap: 10px
+            .section-inner-link__arrow
+                transition: all .5s ease
+                &:hover
+                    transform: translateX(15px) 
+                    transition: all .5s ease
+        .section-inner-link
+            &:hover 
+                opacity: .5 
+                transition: all .5s ease
+            &:hover .section-inner-link__arrow
+                transform: translateX(15px) 
+                transition: all .5s ease
+                opacity: .5
+/* HEADER */
 .header
     position: relative
     .header-elipse 
@@ -73,9 +127,9 @@ h1,h2,h3,h4,h5,h6
             color: var(--w)
         .nav-list__item.active .nav-list__item-link
             color: var(--w)
-
+/* FIRST */
 .first
-    padding: 90px 0
+    padding: 90px 0 90px
     position: relative
     .first-bottom-elipse
         position: absolute
@@ -174,14 +228,7 @@ h1,h2,h3,h4,h5,h6
                         .location-inp, .location-inp-second
                             width: 124px
 
-                .hero-right-inner-search-btn
-                    .btn
-                        background: var(--bl)
-                        color: var(--w)
-                        font-size: 16px
-                        padding: 14px 30px
-                        border-radius: 8px
-            
+                .hero-right-inner-search-btn        
             .hero-right-recognition
                 display: flex
                 width: 455px
@@ -197,6 +244,76 @@ h1,h2,h3,h4,h5,h6
                     .hero-right-recognition__item-text
                         color: var(--ft-g)
                         font-size: 16px
+/* SECOND */
+
+.second
+    padding: 93px 0 139px
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 326px
+        bottom: 0
+        left: 0
+        z-index: -1
+        background: url('../img/bg.jpg') no-repeat center / cover
+    .popular
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 48px
+        .popular-item
+            width: 370px
+            .popular-item__img
+                border-top-left-radius: 14px 
+                border-top-right-radius: 14px
+            .popular-item-inner
+                display: grid
+                gap: 20px
+                padding: 19px 26px 24px
+                background: var(--bg)
+                border-bottom-left-radius: 14px 
+                border-bottom-right-radius: 14px
+                margin-top: -5px
+                .popular-item-inner__location
+                    .popular-item-inner__location-link
+                        color: var(--ft-2)
+                        font-size: 14px
+                        &:hover
+                            text-decoration: underline
+                .popular-item-inner__apts
+                    display: flex
+                    align-items: center
+                    gap: 27px
+                    .popular-item-inner__apts-wrapper
+                        display: flex
+                        align-items: center
+                        gap: 8px
+                        .popular-item-inner__apts-wrapper-text
+                            font-size: 14px
+                            color: var(--ft)
+                .popular-item-inner__price
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    .btn-popular
+                        border-radius: 14px
+                        .btn-popular-book
+                            background: var(--bg)
+                            color: var(--bl)
+                            &:hover
+                                color: var(--w)
+                    .popular-item-inner__price-text
+                        color: var(--w)
+                        font-size: 20px
+                        font-weight: 500
+                        letter-spacing: 0.02em
+                .popular-item-inner__location-link
+                    display: flex
+                    align-items: center
+                    gap: 8px
+
 
 
         
