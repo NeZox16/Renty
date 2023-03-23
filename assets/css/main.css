@@ -346,4 +346,97 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 18px;
             font-weight: 500; }
 
+/* FOURTH */
+.fourth {
+  padding: 60px 0;
+  background: var(--bg-2); }
+
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .benefits .benefits-left {
+    display: grid; }
+    .benefits .benefits-left .benefits_section {
+      display: grid;
+      width: 471px;
+      gap: 30px; }
+      .benefits .benefits-left .benefits_section .benefits_section-text {
+        font-size: 16px;
+        color: var(--ft); }
+    .benefits .benefits-left .benefits-left-wrapper {
+      margin-top: 42px;
+      display: grid;
+      gap: 34px; }
+      .benefits .benefits-left .benefits-left-wrapper .benefits-left-wrapper__item {
+        display: flex;
+        gap: 14px; }
+        .benefits .benefits-left .benefits-left-wrapper .benefits-left-wrapper__item .benefits-left-wrapper__item-text {
+          font-size: 18px;
+          color: var(--w);
+          font-weight: 500; }
+  .benefits .benefits-right {
+    position: relative; }
+    .benefits .benefits-right .benefits-right-img {
+      padding: 20px;
+      background: linear-gradient(to bottom, #FFFFFF26, #FFFFFF15);
+      border-radius: 284.5px 14px 14px 14px; }
+    .benefits .benefits-right .benefits-right-reviews {
+      position: absolute;
+      padding: 30px;
+      bottom: 53px;
+      left: 49px;
+      display: flex;
+      width: 511px;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(125.01deg, rgba(0, 0, 0, 0.45) 29.4%, rgba(0, 0, 0, 0) 97.93%);
+      filter: drop-shadow(10px 14px 74px rgba(2, 92, 138, 0.27));
+      backdrop-filter: blur(15px);
+      border-radius: 22px; }
+      .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-wrapper {
+        display: grid;
+        gap: 16px; }
+        .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-wrapper .benefits-right-reviews-wrapper-title {
+          font-size: 34px;
+          font-weight: 500;
+          color: var(--w); }
+        .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-wrapper .benefits-right-reviews-wrapper__inner {
+          display: flex;
+          align-items: center;
+          gap: 7px; }
+          .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-wrapper .benefits-right-reviews-wrapper__inner .benefits-right-reviews-wrapper__inner-stars {
+            display: flex;
+            align-items: center;
+            gap: 11px; }
+          .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-wrapper .benefits-right-reviews-wrapper__inner .benefits-right-reviews-wrapper__inner-text {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--w); }
+          .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-wrapper .benefits-right-reviews-wrapper__inner .benefits-right-reviews-wrapper__inner-quantity {
+            color: var(--w);
+            font-size: 16px;
+            font-weight: 400; }
+      .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-avatars {
+        position: relative;
+        width: 175px;
+        height: 64px; }
+        .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-avatars .benefits-right-reviews-avatars__img {
+          position: absolute;
+          width: 64px;
+          border: 3px solid var(--w);
+          border-radius: 50%;
+          box-shadow: -9px 2px 24px -5px rgba(0, 0, 0, 0.38); }
+          .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-avatars .benefits-right-reviews-avatars__img:nth-of-type(1) {
+            left: 0; }
+          .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-avatars .benefits-right-reviews-avatars__img:nth-of-type(2) {
+            z-index: 1;
+            right: 75px; }
+          .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-avatars .benefits-right-reviews-avatars__img:nth-of-type(3) {
+            z-index: 2;
+            right: 35px; }
+          .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-avatars .benefits-right-reviews-avatars__img:nth-of-type(4) {
+            right: 0;
+            z-index: 3; }
+
 /*# sourceMappingURL=main.css.map */
