@@ -392,7 +392,6 @@ h1, h2, h3, h4, h5, h6 {
       justify-content: space-between;
       background: linear-gradient(125.01deg, rgba(0, 0, 0, 0.45) 29.4%, rgba(0, 0, 0, 0) 97.93%);
       filter: drop-shadow(10px 14px 74px rgba(2, 92, 138, 0.27));
-      backdrop-filter: blur(15px);
       border-radius: 22px; }
       .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-wrapper {
         display: grid;
@@ -438,5 +437,143 @@ h1, h2, h3, h4, h5, h6 {
           .benefits .benefits-right .benefits-right-reviews .benefits-right-reviews-avatars .benefits-right-reviews-avatars__img:nth-of-type(4) {
             right: 0;
             z-index: 3; }
+
+/* FIFTH */
+.fifth {
+  padding: 100px 0 70px; }
+
+.new .new_section {
+  max-width: 620px; }
+
+.new-wrapper {
+  position: relative;
+  margin-top: 84px; }
+
+.slick-slider .slick-list {
+  overflow-x: hidden;
+  display: flex; }
+  .slick-slider .slick-list .slick-track {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 100%; }
+    .slick-slider .slick-list .slick-track .new-wrapper__item {
+      position: relative;
+      border-radius: 20px;
+      transition: all 0.5s ease; }
+      .slick-slider .slick-list .slick-track .new-wrapper__item img {
+        border-radius: 20px;
+        transition: all 0.5s ease; }
+    .slick-slider .slick-list .slick-track .new-wrapper__item.slick-slide {
+      transition: all 0.5s ease; }
+      .slick-slider .slick-list .slick-track .new-wrapper__item.slick-slide .new-wrapper__item-img {
+        border-radius: 20px;
+        transition: all 0.5s ease; }
+    .slick-slider .slick-list .slick-track .new-wrapper__item.slick-slide.slick-current.slick-active {
+      transition: all 0.5s ease; }
+      .slick-slider .slick-list .slick-track .new-wrapper__item.slick-slide.slick-current.slick-active::before {
+        content: "Editorial House";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        height: 100%;
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        font-size: 28px;
+        color: var(--w); }
+      .slick-slider .slick-list .slick-track .new-wrapper__item.slick-slide.slick-current.slick-active::after {
+        content: "JL. Kencana oke. No2 universen";
+        position: absolute;
+        top: 55%;
+        width: 100%;
+        font-size: 16px;
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--w); }
+      .slick-slider .slick-list .slick-track .new-wrapper__item.slick-slide.slick-current.slick-active img {
+        position: relative;
+        height: 454px;
+        width: 370px;
+        border-radius: 20px;
+        transition: all 0.5s ease; }
+
+.slick-arrow.slick-prev {
+  position: absolute;
+  top: -120px;
+  right: 220px;
+  z-index: 1;
+  border: 1px solid var(--ft);
+  background: none;
+  border-radius: 50%;
+  padding: 27px 30px;
+  transition: all 0.5s ease; }
+  .slick-arrow.slick-prev::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 38%;
+    left: 44%;
+    border: 1px solid var(--w);
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    transform: rotate(45deg);
+    transition: all 0.5s ease; }
+  .slick-arrow.slick-prev:hover {
+    background: var(--w);
+    transition: all 0.5s ease; }
+    .slick-arrow.slick-prev:hover::before {
+      border: 1px solid var(--b);
+      border-top: 1px solid transparent;
+      border-right: 1px solid transparent;
+      width: 12px;
+      height: 12px;
+      transition: all 0.5s ease; }
+
+.slick-arrow.slick-next {
+  position: absolute;
+  top: -120px;
+  right: 135px;
+  z-index: 1;
+  border: 1px solid var(--ft);
+  background: none;
+  border-radius: 50%;
+  padding: 27px 30px;
+  transition: all 0.5s ease; }
+  .slick-arrow.slick-next::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 38%;
+    left: 36%;
+    border: 1px solid var(--w);
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    transform: rotate(225deg);
+    transition: all 0.5s ease; }
+  .slick-arrow.slick-next:hover {
+    background: var(--w);
+    transition: all 0.5s ease; }
+    .slick-arrow.slick-next:hover::before {
+      border: 1px solid var(--b);
+      border-top: 1px solid transparent;
+      border-right: 1px solid transparent;
+      width: 12px;
+      height: 12px;
+      transition: all 0.5s ease; }
+
+.slick-arrow.slick-disabled {
+  opacity: 0.2;
+  transition: all 0.5s ease;
+  border: 1px solid var(--b); }
 
 /*# sourceMappingURL=main.css.map */
