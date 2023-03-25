@@ -576,4 +576,72 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease;
   border: 1px solid var(--b); }
 
+/* SIXTH */
+.sixth {
+  padding: 30px 0 56px;
+  background: var(--bg-2) url("../img/waves.jpg") no-repeat bottom/cover; }
+
+.section-faq {
+  text-align: center; }
+  .section-faq .section-inner-title {
+    font-size: 48px;
+    color: var(--w);
+    font-weight: 600; }
+  .section-faq .section-inner-text {
+    font-size: 16px;
+    color: var(--ft-2);
+    width: 769px;
+    margin: 0 auto; }
+
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 120px; }
+  .faq-wrapper .faq-wrapper__item {
+    width: 100%;
+    border: 1px solid var(--bl);
+    padding: 24px 56px;
+    border-radius: 8px;
+    cursor: pointer; }
+    .faq-wrapper .faq-wrapper__item .faq-wrapper__item-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .faq-wrapper .faq-wrapper__item .faq-wrapper__item-inner .faq-wrapper__item-inner-title {
+        font-size: 24px;
+        color: var(--w);
+        font-weight: 600; }
+      .faq-wrapper .faq-wrapper__item .faq-wrapper__item-inner .btn-close {
+        transform: rotate(45deg);
+        width: 26px;
+        transition: all 0.5s ease;
+        position: relative; }
+        .faq-wrapper .faq-wrapper__item .faq-wrapper__item-inner .btn-close::before {
+          content: "";
+          position: absolute;
+          width: 24px;
+          transform: rotate(45deg);
+          height: 2px;
+          background: var(--w); }
+        .faq-wrapper .faq-wrapper__item .faq-wrapper__item-inner .btn-close::after {
+          content: "";
+          position: absolute;
+          width: 24px;
+          transform: rotate(-45deg);
+          height: 2px;
+          background: var(--w); }
+      .faq-wrapper .faq-wrapper__item .faq-wrapper__item-inner .btn-close.active {
+        transform: rotate(0deg); }
+    .faq-wrapper .faq-wrapper__item .faq-wrapper__item-content {
+      display: none;
+      margin-top: 14px;
+      width: 572px; }
+      .faq-wrapper .faq-wrapper__item .faq-wrapper__item-content .faq-wrapper__item-content-text {
+        font-size: 14px;
+        color: var(--ft-2); }
+  .faq-wrapper .faq-wrapper__item.active {
+    background: var(--bl);
+    transition: all 0.5s ease; }
+
 /*# sourceMappingURL=main.css.map */

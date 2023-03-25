@@ -19,4 +19,19 @@ $(document).ready(function() {
         nextArrow:"<button type='button' class='slick-next'></button>",
       });
 
+    $(".faq-wrapper__item").click(function() {
+        if ($(this).hasClass('active')) {
+          $('.btn-close').removeClass('active');
+          $(this).find('.faq-wrapper__item-content').hide(500);
+          $(this).removeClass('active');
+        } else {
+          $('.faq-wrapper__item-content').hide(500);
+          $('.faq-wrapper__item').removeClass('active');
+          $('.btn-close').removeClass('active');
+          $(this).find('.btn-close').addClass('active');
+          $(this).find('.faq-wrapper__item-content').show(500);
+          $(this).addClass('active');
+        }
+      });
+
 })
