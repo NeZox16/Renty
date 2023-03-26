@@ -650,5 +650,102 @@ h1,h2,h3,h4,h5,h6
     .faq-wrapper__item.active
         background: var(--bl)
         transition: all .5s ease
-    
+/* FOOTER */
+
+.footer
+    padding-top: 140px
+.social-title
+    font-size: 20px
+    font-weight: 600
+    position: relative
+    padding-bottom: 7px
+    color: var(--w)
+    &::after
+        content: ''
+        position: absolute
+        height: 1px
+        width: 87px
+        bottom: 0
+        left: 0
+        background: var(--bl)
+.social
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    .social-other
+        display: grid
+        gap: 69px
+        .social-other__list
+            display: grid
+            gap: 20px
+            .social-other__list__item
+                transition: all .5s ease
+                &:hover
+                    transition: all .5s ease
+                    transform: translateX(15px)
+                    .social-other__list__item-link
+                        transition: all .5s ease
+                        color: var(--w)
+                .social-other__list__item-link
+                    color: var(--ft-2)
+
+        .social-other__link
+            display: flex
+            gap: 26px
+            .social-other__link-item
+                .icon-soc
+                    fill: #808080
+                    transition: all .5s ease
+                    &:hover
+                        transition: all .5s ease
+                        fill: var(--w)
+    .social-form
+        max-width: 426px
+        .social-form-wrapper
+            gap: 20px
+            display: grid
+            .social-form-wrapper-text
+                font-size: 14px
+                color: var(--ft)
+        .social-form-inner
+            margin-top: 30px
+            display: flex
+            flex-direction: column
+            gap: 22px
+            .social-form-inner__item
+                .social-form-inner__item-input
+                    width: 100%
+                    background: transparent
+                    padding: 0 13px 13px 0
+                    border-bottom: 1px solid var(--bg-3)
+                    color: var(--w)
+            .btn-footer
+                margin: 0 0 0 auto
+.social-group
+    padding-bottom: 30px
+    margin-top: 69px
+    border-bottom: 1px solid var(--bg-3)
+    .social-group-text
+        max-width: 603px
+        color: var(--ft)
+        font-size: 12px
+
+.social-copyright
+    padding: 43px 0 54px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .social-copyright-text
+        color: var(--ft)
+        font-size: 14px
+    .social-copyright__item
+        display: flex
+        gap: 30px
+        .social-copyright__item-link
+            color: var(--ft)
+            font-size: 14px
+            transition: all .5s ease
+            &:hover
+                color: var(--w)
+                transition: all .5s ease
         
