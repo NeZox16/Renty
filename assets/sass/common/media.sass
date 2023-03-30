@@ -1,0 +1,548 @@
+@import './main_variable'
+
+/* RESP */
+@media (max-width: $desktop) 
+    .container
+        max-width: 960px
+    .section
+        .section-inner-title
+            font-size: 36px 
+    .btn
+        padding: 14px 22px
+    .hero
+        .hero-right
+            width: 430px 
+            .hero-right-wrapper
+                .hero-right-title 
+                    font-size: 45px 
+                .hero-right-text
+                    font-size: 15px 
+            .hero-right-inner
+                .hero-right-inner-search
+                    width: 230px 
+                    flex-direction: column 
+                    gap: 15px
+                    margin: 0 auto 
+                    .hero-right-inner-search-btn
+                        margin: 0 auto
+            .hero-right-recognition
+                width: 430px 
+                .hero-right-recognition__item
+                    .hero-right-recognition__item-title
+                        font-size: 30px
+                    .hero-right-recognition__item-text
+                        font-size: 13px
+
+            .location-inp-second
+
+    /* SECOND */   
+    .popular     
+        .popular-item
+            width: 310px 
+            .popular-item__img
+                width: 100% 
+            .popular-item-inner
+                .popular-item-inner__apts
+                    gap: 13px 
+                .popular-item-inner__price-text
+                    font-size: 17px 
+    /* THIRD */
+    .third
+        .services
+            &-left
+                &-elipse
+                    top: 15% 
+            .services-left-img
+                max-width: 530px 
+            .services-right
+                width: 380px 
+    /* FOURTH */
+    .benefits
+        .benefits-left
+
+        .benefits-right
+            .benefits-right-img
+                max-width: 430px 
+            .benefits-right-reviews
+                width: 335px 
+                padding: 10px 
+                .benefits-right-reviews-wrapper
+                    .benefits-right-reviews-wrapper-title
+                        font-size: 20px 
+                    .benefits-right-reviews-wrapper__inner
+                        .benefits-right-reviews-wrapper__inner-quantity
+                            font-size: 11px 
+                .benefits-right-reviews-avatars
+                    width: 140px
+                    height: 48px
+                    .benefits-right-reviews-avatars__img
+                        width: 48px
+                        &:nth-of-type(2) 
+                            right: 60px
+                            
+                    
+    /* FIFTH */
+    .slick-slider
+        .slick-list
+            .slick-track
+                .new-wrapper__item
+                    .new-wrapper__item-img
+                        width: 335px
+                .new-wrapper__item.slick-slide
+                    &-img
+                .new-wrapper__item.slick-slide.slick-current.slick-active
+                    &::before
+                        font-size: 24px
+                    &::after
+                        font-size: 14px
+                    img
+                        width: 335px
+                        height: 410px
+    
+@media ( max-width: $laptop)
+    .container
+        max-width: 720px
+    .section
+        .section-inner-title
+    .btn
+    .nav-list
+        display: none
+    .close-btn
+        width: 26px
+        height: 26px
+        position: relative
+        .line-first
+            position: absolute
+            width: 17px
+            height: 2px
+            border-radius: 15px
+            background: var(--bg-3)
+            top: 46%
+            left: 5px
+            transition: all .5s ease
+            transform: rotate(45deg)
+        .line-second
+            position: absolute
+            width: 17px
+            height: 2px
+            border-radius: 15px
+            background: var(--bg-3)
+            bottom: 45%
+            left: 5px
+            transition: all .5s ease
+            transform: rotate(-45deg)
+    .menu
+        display: block
+        width: 26px
+        height: 26px
+        background: var(--w)
+        border-radius: 3px
+        position: relative
+        transition: all .5s ease
+        .line-top
+            position: absolute
+            width: 17px
+            height: 2px
+            border-radius: 15px
+            background: var(--bg-3)
+            top: 30%
+            left: 5px
+            transition: all .5s ease
+        .line-top.active
+            transform: rotate(45deg)
+            transition: all .5s ease
+            top: 45%
+        .line-bottom
+            position: absolute
+            width: 17px
+            height: 2px
+            border-radius: 15px
+            background: var(--bg-3)
+            bottom: 30%
+            left: 5px
+            transition: all .5s ease
+        .line-bottom.active
+            bottom: 45%
+            transform: rotate(-45deg)
+            transition: all .5s ease
+    .mobile
+        display: flex
+        position: fixed
+        height: 100vh
+        max-width: 300px
+        width: 100%
+        top: 0
+        right: -100%
+        padding: 30px
+        align-items: center
+        justify-content: center
+        background: var(--w)
+        transition: all 1s ease
+        z-index: 1
+        .mobile-nav
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 40px
+            position: relative
+            transition: all .5s ease
+            .mobile-nav-list
+                display: flex
+                align-items: center
+                flex-direction: column
+                gap: 40px
+                transition: all .5s ease
+                .mobile-nav-list__item
+                    .mobile-nav-list__item-link
+                        color: var(--bg-2)
+                        transition: all .5s ease
+                        padding: 13px
+                        border-radius: 14px
+                        &:hover
+                            background: var(--bg-2)
+                            color: var(--w)
+                            transition: all .5s ease
+                    
+    .mobile.active
+        transition: all 1s ease
+        right: 0
+    .first
+        .hero
+            flex-direction: column
+            gap: 50px
+            justify-content: center
+            .hero-left
+                z-index: -1
+            .hero-right
+                order: -1
+                display: grid
+                .hero-right-inner
+                    .hero-right-inner-search
+                        width: 100%
+        /* SECOND */   
+    .popular
+        flex-wrap: wrap
+        gap: 45px
+        .popular-item
+            border-radius: 14px
+            -webkit-box-shadow: 8px 8px 24px 0px rgba(55, 55, 55, 1)
+            -moz-box-shadow: 8px 8px 24px 0px rgba(55, 55, 55, 1)
+            box-shadow: 8px 8px 24px 0px rgba(55, 55, 55, 1)
+    /* THIRD */
+    .third
+        .services
+            flex-direction: column
+            gap: 30px
+            &-left
+                &-elipse
+            .services-left-img
+            .services-right
+                width: 500px
+                order: -1
+    /* FOURTH */
+    .benefits
+        flex-direction: column
+        gap: 30px
+        .benefits-left
+
+        .benefits-right
+            .benefits-right-img
+                max-width: 430px 
+            .benefits-right-reviews
+                width: 335px 
+                padding: 10px 
+                cursor: pointer
+                .benefits-right-reviews-wrapper
+                    .benefits-right-reviews-wrapper-title
+                        font-size: 20px 
+                    .benefits-right-reviews-wrapper__inner
+                        .benefits-right-reviews-wrapper__inner-quantity
+                            font-size: 11px 
+                .benefits-right-reviews-avatars
+                    width: 140px
+                    height: 48px
+                    .benefits-right-reviews-avatars__img
+                        width: 48px
+                        &:nth-of-type(1)
+                            left: 10px
+                        &:nth-of-type(2) 
+                            right: 60px
+                        &:nth-of-type(4)
+                            right: 10px
+    /* FIFTH */
+    .new_section
+        width: 350px
+    /* SIXTH */
+    .section-faq
+        .section-inner-text
+            width: 100%
+    .slick-next.slick-arrow
+        top: -80px
+    .slick-arrow.slick-prev
+        top: -80px
+    .faq-wrapper
+        &__item
+            &-inner
+            &-content
+                width: 375px
+        
+@media ( max-width: $tablet)
+    .container
+        max-width: 540px
+    .section
+        .section-inner-title
+            font-size: 30px
+    .btn
+    .nav-list
+        display: none
+    .first
+        .hero
+            .hero-left
+                .hero-left__img
+                    max-width: 420px
+            .hero-right
+                .hero-right-wrapper
+                    .hero-right-title
+                        font-size: 40px
+                    .hero-right-text
+                        font-size: 13px
+    /* SECOND */   
+    .second
+        .popular
+            justify-content: center
+    /* THIRD */
+    .third
+        .services
+            &-left
+                &-elipse
+            .services-left-img
+                max-width: 450px
+            .services-right
+                width: 410px
+                .section_services 
+                    .section-inner-text
+                        font-size: 14px
+                .services-right__review
+                    gap: 25px 16px
+    /* SIXTH */
+    .faq-wrapper
+        &__item
+            &-inner
+                &-title
+                    font-size: 18px
+            &-content
+                width: 100%
+@media ( max-width: $small-mobile)
+    .container
+        max-width: 440px
+    .section
+        .section-inner-title
+            font-size: 23px
+        .section-inner-link
+            font-size: 16px
+    .btn
+    .nav-list
+        display: none
+    .first
+        .hero
+            .hero-left
+                .hero-left__img
+                    max-width: 420px
+            .hero-right
+                .hero-right-wrapper
+                    .hero-right-title
+                        font-size: 35px
+                    .hero-right-text
+                        font-size: 13px
+                .hero-right-recognition 
+                    .hero-right-recognition__item
+                        .hero-right-recognition__item-title
+                            font-size: 26px
+    /* SECOND */   
+    .second
+        .popular
+            justify-content: center
+    /* THIRD */
+    .third
+        .services
+            &-left
+                &-elipse
+                    width: 352px
+                    height: 352px
+            .services-left-img
+                max-width: 450px
+            .services-right
+                width: 410px
+                .section_services 
+                    .section-inner-text
+                        font-size: 14px
+                .services-right__review
+                    gap: 25px 16px
+    /* FIFTH */
+    .slick-next.slick-arrow
+        top: -70px
+    .slick-arrow.slick-prev
+        top: -70px
+    /* SIXTH */
+    .faq-wrapper
+        &__item
+            &-inner
+                &-title
+                    font-size: 16px
+            &-content
+                width: 100%
+                &-text
+                    font-size: 13px
+    /* FOOTER */
+    .social
+        flex-direction: column
+        gap: 40px
+@media ( max-width: $extra-small-mobile)
+    .container
+        padding: 0 15px
+        max-width: 100%
+    .section
+        .section-inner-title
+            font-size: 23px
+        .section-inner-link
+            font-size: 13px
+    .btn
+        padding: 14px
+    .nav-list
+        display: none
+    .header-elipse
+        width: 100px
+        h100px
+    .first
+        .first-bottom-elipse
+            width: 100%
+            height: 100%
+        .hero-left-elipse
+            display: none
+        .hero
+            .hero-left
+                .hero-left__img
+                    max-width: 100%
+            .hero-right
+                width: 100%
+                .hero-right-wrapper
+                    width: 100%
+                    .hero-right-title
+                        font-size: 35px
+                    .hero-right-text
+                        font-size: 13px
+                .hero-right-recognition
+                    width: 100%
+                    flex-wrap: wrap
+                    gap: 30px
+                    .hero-right-recognition__item
+                        .hero-right-recognition__item-title
+                            font-size: 26px
+                .hero-right-inner
+                    .hero-right-inner-search
+                        flex-direction: column
+                        .hero-right-inner-search__first, .hero-right-inner-search__second
+                            gap: 6px
+                            .select-first, .select-second
+                                &::before
+                                    top: 3px
+                                    right: -5px
+                            .location-inp, .location-inp-second
+                                width: 100%
+                        .hero-right-inner-search-btn
+                            margin: 0
+    /* SECOND */  
+    .section-inner
+        flex-direction: column
+        gap: 30px
+        align-items: flex-start 
+    .second
+        padding: 32px 0
+        .popular
+            justify-content: center
+        .popular-item
+            &-inner
+                padding: 19px 15px 24px
+                .popular-item-inner__apts
+                    .popular-item-inner__apts-wrapper
+                        .popular-item-inner__apts-wrapper-text
+                            font-size: 11px
+    /* THIRD */
+    .third
+        padding: 85px 0 80px
+        .services
+            &-left
+                &-elipse
+                    width: 100%
+                    height: 100%
+            .services-left-img
+                max-width: 100%
+            .services-right
+                width: 100%
+                .section_services 
+                    .section-inner-text
+                .services-right__review
+                    grid-template-columns: 179px
+    /* FOURTH */
+    .benefits 
+        .benefits-right 
+            .benefits-right-img
+                max-width: 100%
+            .benefits-right-reviews
+                    width: 198px
+                    left: 30px
+                    bottom: 12px
+                    flex-direction: column
+        .benefits-left
+            .benefits_section
+                width: 100%
+    /* FIFTH */
+    section
+        .new_section
+            width: 100%
+            max-width: 100%
+    .slick-slider
+        .slick-list
+            .slick-track 
+                .new-wrapper__item 
+                    .new-wrapper__item-img
+                        width: 100%
+                .new-wrapper__item.slick-slide.slick-current.slick-active img
+                        width: 240px
+                        height: 200px
+    .slick-next.slick-arrow
+        top: -70px
+        right: 65px
+    .slick-arrow.slick-prev
+        top: -70px
+        right: 140px
+    /* SIXTH */
+    .section-faq 
+        .section-inner-text
+            font-size: 13px
+    .faq-wrapper
+        margin-top: 60px
+        &__item
+            padding: 24px
+            &-inner
+                &-title
+                    font-size: 14px
+            &-content
+                width: 100%
+                &-text
+                    font-size: 13px
+    /* FOOTER */
+    .social
+        flex-direction: column
+        gap: 40px
+        .social-form-inner 
+            .btn-footer
+                margin: 0
+    .social-copyright
+        flex-direction: column
+        gap: 30px
+    
+    
+
+

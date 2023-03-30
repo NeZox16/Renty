@@ -3,6 +3,7 @@ $border-s-color: #FFFFFF26
 $border-f-color: #FFFFFF15
 $list1: $border-s-color, $border-f-color
 
+
 @mixin gradient($direction, $list) 
   background: linear-gradient($direction, $list) 
 
@@ -31,7 +32,7 @@ body
 h1,h2,h3,h4,h5,h6
     font-family: 'Sora', sans-serif
 .container 
-    max-width: 1200px
+    max-width: 1140px
     width: 100%
     margin: 0 auto
 .btn
@@ -51,46 +52,49 @@ h1,h2,h3,h4,h5,h6
         -webkit-box-shadow: 0px 0px 24px 7px var(--bl)
         -moz-box-shadow: 0px 0px 24px 7px var(--bl)
         box-shadow: 0px 0px 24px 7px var(--bl)
+.menu, .mobile
+    display: none
+    transition: all .5s ease
 
 .section
     display: grid
     gap: 16px
-    .section-subtitle
+    &-subtitle
         font-size: 18px
         font-weight: 500
         color: var(--bl)
-    .section-inner
+    &-inner
         display: flex
         align-items: center
         justify-content: space-between
-        .section-inner-title
+        &-title
             font-size: 48px
             font-weight: 600
             color: var(--w)
-        .section-inner-link
+        &-link
             display: flex
             align-items: center
             font-size: 18px
             color: var(--ft-2)
             transition: all .5s ease
             gap: 10px
-            .section-inner-link__arrow
+            &__arrow
                 transition: all .5s ease
                 &:hover
                     transform: translateX(15px) 
                     transition: all .5s ease
-        .section-inner-link
+        &-link
             &:hover 
                 opacity: .5 
                 transition: all .5s ease
-            &:hover .section-inner-link__arrow
+            &:hover &__arrow
                 transform: translateX(15px) 
                 transition: all .5s ease
                 opacity: .5
 /* HEADER */
 .header
     position: relative
-    .header-elipse 
+    &-elipse 
         position: absolute
         background: rgba(120, 120, 120, 0.4)
         filter: blur(212px)
@@ -103,35 +107,35 @@ h1,h2,h3,h4,h5,h6
     align-items: center
     justify-content: space-between
     padding: 30px 0
-    .nav-list 
+    &-list 
         display: flex
         align-items: center
         justify-content: space-between
         width: 249px
-        .nav-list__item
+        &__item
             padding-bottom: 7px
             border-bottom: 2px solid rgba(255, 255, 255, 0)
             transition: all .5s ease
             &:hover
                 border-bottom: 2px solid var(--bl)
                 transition: all .5s ease
-            &:hover .nav-list__item-link
+            &:hover &-link
                 color: var(--w)
                 transition: all .5s ease
-            .nav-list__item-link
+            &-link
                 font-size: 16px
                 color: var(--ft)
-        .nav-list__item.active
+        &__item.active
             border-bottom: 2px solid var(--bl)
             transition: all .5s ease
             color: var(--w)
-        .nav-list__item.active .nav-list__item-link
+        &__item.active &__item-link
             color: var(--w)
 /* FIRST */
 .first
     padding: 90px 0 90px
     position: relative
-    .first-bottom-elipse
+    &-bottom-elipse
         position: absolute
         background: rgba(120, 120, 120, 0.4)
         filter: blur(212px)
@@ -143,9 +147,9 @@ h1,h2,h3,h4,h5,h6
         display: flex
         align-items: center
         justify-content: space-between
-        .hero-left
+        &-left
             position: relative
-            .hero-left-elipse
+            &-elipse
                 position: absolute
                 width: 204px
                 height: 204px
@@ -153,13 +157,13 @@ h1,h2,h3,h4,h5,h6
                 right: -50px
                 background: rgba(187, 110, 62, 0.2)
                 filter: blur(95px)
-            .hero-left__img
+            &__img
                 border-radius: 14px
                 padding: 20px
                 @include gradient(to bottom, $list1)
-        .hero-right
+        &-right
             width: 574px
-            .hero-right-wrapper
+            &-wrapper
                 display: flex
                 flex-direction: column
                 gap: 24px
@@ -171,21 +175,21 @@ h1,h2,h3,h4,h5,h6
                 .hero-right-text
                     font-size: 16px
                     color: var(--ft)
-            .hero-right-inner
+            &-inner
                 display: flex
                 margin-bottom: 76px
-                .hero-right-inner-search
+                &-search
                     background: var(--w)
                     padding: 20px
                     border-radius: 14px
                     width: 579px
                     display: flex
                     justify-content: space-between
-                    .hero-right-inner-search__first-loc, .hero-right-inner-search__second-loc
+                    &__first-loc, &__second-loc
                         padding: 10px
                         border: 1px solid var(--ft-2)
                         border-radius: 50%
-                    .hero-right-inner-search__first, .hero-right-inner-search__second
+                    &__first, &__second
                         display: flex
                         align-items: center
                         gap: 15px
@@ -193,8 +197,8 @@ h1,h2,h3,h4,h5,h6
                         &:hover
                             opacity: .8
                             transition: all .5s ease
-                        .hero-right-inner-search__first-wrapper, .hero-right-inner-search__second-wrapper
-                                .hero-right-inner-search__first-wrapper-location, .hero-right-inner-search__second-wrapper-location
+                        &-wrapper, &-wrapper
+                                &-location, &-location
                                     display: flex
                                     flex-direction: column
                         .select-first, .select-second
@@ -224,24 +228,22 @@ h1,h2,h3,h4,h5,h6
                                 border-top: 1px solid transparent
                                 border-right: 1px solid transparent
                                 transform: rotate(-225deg)
-
                         .location-inp, .location-inp-second
                             width: 124px
-
-                .hero-right-inner-search-btn        
-            .hero-right-recognition
+                &-search-btn        
+            &-recognition
                 display: flex
                 width: 455px
                 justify-content: space-between
                 align-items: center
-                .hero-right-recognition__item
-                    .hero-right-recognition__item-title
+                &__item
+                    &-title
                         font-size: 36px
                         font-weight: 600
                         color: var(--w)
                         span 
                             color: var(--ft-3)
-                    .hero-right-recognition__item-text
+                    &-text
                         color: var(--ft-g)
                         font-size: 16px
 /* SECOND */
@@ -263,12 +265,12 @@ h1,h2,h3,h4,h5,h6
         align-items: center
         justify-content: space-between
         margin-top: 48px
-        .popular-item
+        &-item
             width: 370px
-            .popular-item__img
+            &__img
                 border-top-left-radius: 14px 
                 border-top-right-radius: 14px
-            .popular-item-inner
+            &-inner
                 display: grid
                 gap: 20px
                 padding: 19px 26px 24px
@@ -276,41 +278,41 @@ h1,h2,h3,h4,h5,h6
                 border-bottom-left-radius: 14px 
                 border-bottom-right-radius: 14px
                 margin-top: -5px
-                .popular-item-inner__location
-                    .popular-item-inner__location-link
+                &__location
+                    &-link
                         color: var(--ft-2)
                         font-size: 14px
                         &:hover
                             text-decoration: underline
-                .popular-item-inner__apts
+                &__apts
                     display: flex
                     align-items: center
                     gap: 27px
-                    .popular-item-inner__apts-wrapper
+                    &-wrapper
                         display: flex
                         align-items: center
                         gap: 8px
-                        .popular-item-inner__apts-wrapper-text
+                        &-text
                             font-size: 14px
                             color: var(--ft)
-                .popular-item-inner__price
+                &__price
                     display: flex
                     align-items: center
                     justify-content: space-between
                     .btn-popular
                         border-radius: 14px
-                        .btn-popular-book
+                        &-book
                             background: var(--bg)
                             color: var(--bl)
                             &:hover
                                 color: var(--w)
-                    .popular-item-inner__price-text
+                    &-text
                         color: var(--w)
                         font-size: 20px
                         font-weight: 500
                         letter-spacing: 0.02em
-                .popular-item-inner__location-link
-                    display: flex
+                &__location-link
+                    display: flexW
                     align-items: center
                     gap: 8px
 /* THIRD */
@@ -321,13 +323,13 @@ h1,h2,h3,h4,h5,h6
         display: flex
         align-items: center
         justify-content: space-between
-        .services-left
+        &-left
             position: relative
-            .services-left-img
+            &-img
                 border-radius: 14px
                 padding: 20px
                 @include gradient(to bottom, $list1)
-            .services-left-elipse
+            &-elipse
                 position: absolute
                 top: 30%
                 left: 0
@@ -336,7 +338,7 @@ h1,h2,h3,h4,h5,h6
                 background: rgba(11, 134, 83, 0.3)
                 filter: blur(212px)
 
-        .services-right
+        &-right
             width: 471px
             display: grid
             gap: 40px
@@ -346,15 +348,15 @@ h1,h2,h3,h4,h5,h6
                 .section-inner-text
                     font-size: 16px
                     color: var(--ft)
-            .services-right__review
+            &__review
                 display: grid
                 grid-template-columns: 179px 179px
                 gap: 34px 28px
-                .services-right__review-item
+                &-item
                     display: flex
                     gap: 8px
                     align-items: center
-                    .services-right__review-item__text
+                    &__text
                         color: var(--w)
                         font-size: 18px
                         font-weight: 500
@@ -366,33 +368,33 @@ h1,h2,h3,h4,h5,h6
     display: flex
     align-items: center
     justify-content: space-between
-    .benefits-left
+    &-left
         display: grid
         .benefits_section
             display: grid
             width: 471px
             gap: 30px
-            .benefits_section-text
+            &-text
                 font-size: 16px
                 color: var(--ft)
-        .benefits-left-wrapper
+        &-wrapper
             margin-top: 42px
             display: grid
             gap: 34px
-            .benefits-left-wrapper__item
+            &__item
                 display: flex
                 gap: 14px
-                .benefits-left-wrapper__item-text
+                &-text
                     font-size: 18px
                     color: var(--w)
                     font-weight: 500
-    .benefits-right
+    &-right
         position: relative
-        .benefits-right-img
+        &-img
             padding: 20px
             @include gradient(to bottom, $list1)
             border-radius: 284.5px 14px 14px 14px
-        .benefits-right-reviews
+        &-reviews
                 position: absolute
                 padding: 30px
                 bottom: 53px
@@ -404,26 +406,26 @@ h1,h2,h3,h4,h5,h6
                 background: linear-gradient(125.01deg, rgba(0, 0, 0, 0.45) 29.4%, rgba(0, 0, 0, 0) 97.93%)
                 filter: drop-shadow(10px 14px 74px rgba(2, 92, 138, 0.27))
                 border-radius: 22px
-                .benefits-right-reviews-wrapper
+                &-wrapper
                     display: grid
                     gap: 16px
-                    .benefits-right-reviews-wrapper-title
+                    &-title
                         font-size: 34px
                         font-weight: 500
                         color: var(--w)
-                    .benefits-right-reviews-wrapper__inner
+                    &__inner
                         display: flex
                         align-items: center
                         gap: 7px
-                        .benefits-right-reviews-wrapper__inner-stars
+                        &-stars
                             display: flex
                             align-items: center
                             gap: 11px
-                        .benefits-right-reviews-wrapper__inner-text
+                        &-text
                             font-size: 20px
                             font-weight: 500
                             color: var(--w)
-                        .benefits-right-reviews-wrapper__inner-quantity
+                        &-quantity
                             color: var(--w)
                             font-size: 16px
                             font-weight: 400
@@ -431,7 +433,7 @@ h1,h2,h3,h4,h5,h6
                     position: relative 
                     width: 175px
                     height: 64px 
-                    .benefits-right-reviews-avatars__img
+                    &__img
                         position: absolute
                         width: 64px
                         border: 3px solid var(--w)
@@ -452,7 +454,7 @@ h1,h2,h3,h4,h5,h6
 .fifth
     padding: 100px 0 70px
 .new
-    .new_section
+    &_section
         max-width: 620px
 .new-wrapper
     position: relative
@@ -475,7 +477,7 @@ h1,h2,h3,h4,h5,h6
                     transition: all .5s ease
             .new-wrapper__item.slick-slide
                 transition: all .5s ease
-                .new-wrapper__item-img
+                &-img
                     border-radius: 20px 
                     transition: all .5s ease
             .new-wrapper__item.slick-slide.slick-current.slick-active
@@ -524,7 +526,7 @@ h1,h2,h3,h4,h5,h6
     border: 1px solid var(--ft)
     background: none
     border-radius: 50% 
-    padding: 27px 30px
+    padding: 27px
     transition: all .5s ease
     &::before
         content: ""
@@ -556,7 +558,7 @@ h1,h2,h3,h4,h5,h6
     border: 1px solid var(--ft)
     background: none
     border-radius: 50% 
-    padding: 27px 30px
+    padding: 27px
     transition: all .5s ease
     &::before
         content: ""
@@ -591,7 +593,7 @@ h1,h2,h3,h4,h5,h6
     background: var(--bg-2) url('../img/waves.jpg') no-repeat bottom / cover
 .section-faq
     text-align: center
-    .section-inner-title
+    &-inner-title
         font-size: 48px
         color: var(--w)
         font-weight: 600
@@ -605,17 +607,17 @@ h1,h2,h3,h4,h5,h6
     flex-direction: column
     gap: 30px
     margin-top: 120px
-    .faq-wrapper__item
+    &__item
         width: 100%
         border: 1px solid var(--bl)
         padding: 24px 56px
         border-radius: 8px
         cursor: pointer
-        .faq-wrapper__item-inner
+        &-inner
             display: flex
             align-items: center
             justify-content: space-between
-            .faq-wrapper__item-inner-title
+            &-title
                 font-size: 24px
                 color: var(--w)
                 font-weight: 600
@@ -640,14 +642,14 @@ h1,h2,h3,h4,h5,h6
                     background: var(--w)
             .btn-close.active
                 transform: rotate(0deg)
-        .faq-wrapper__item-content
+        &-content
             display: none
             margin-top: 14px
             width: 572px
-            .faq-wrapper__item-content-text
+            &-text
                 font-size: 14px
                 color: var(--ft-2)
-    .faq-wrapper__item.active
+    &__item.active
         background: var(--bl)
         transition: all .5s ease
 /* FOOTER */
@@ -672,48 +674,48 @@ h1,h2,h3,h4,h5,h6
     display: flex
     align-items: flex-start
     justify-content: space-between
-    .social-other
+    &-other
         display: grid
         gap: 69px
-        .social-other__list
+        &__list
             display: grid
             gap: 20px
-            .social-other__list__item
+            &__item
                 transition: all .5s ease
                 &:hover
                     transition: all .5s ease
                     transform: translateX(15px)
-                    .social-other__list__item-link
+                    &-link
                         transition: all .5s ease
                         color: var(--w)
-                .social-other__list__item-link
+                &-link
                     color: var(--ft-2)
 
-        .social-other__link
+        &__link
             display: flex
             gap: 26px
-            .social-other__link-item
+            &-item
                 .icon-soc
                     fill: #808080
                     transition: all .5s ease
                     &:hover
                         transition: all .5s ease
                         fill: var(--w)
-    .social-form
+    &-form
         max-width: 426px
-        .social-form-wrapper
+        &-wrapper
             gap: 20px
             display: grid
-            .social-form-wrapper-text
+            &-text
                 font-size: 14px
                 color: var(--ft)
-        .social-form-inner
+        &-inner
             margin-top: 30px
             display: flex
             flex-direction: column
             gap: 22px
-            .social-form-inner__item
-                .social-form-inner__item-input
+            &__item
+                &-input
                     width: 100%
                     background: transparent
                     padding: 0 13px 13px 0
@@ -725,7 +727,7 @@ h1,h2,h3,h4,h5,h6
     padding-bottom: 30px
     margin-top: 69px
     border-bottom: 1px solid var(--bg-3)
-    .social-group-text
+    &-text
         max-width: 603px
         color: var(--ft)
         font-size: 12px
@@ -735,17 +737,16 @@ h1,h2,h3,h4,h5,h6
     display: flex
     align-items: center
     justify-content: space-between
-    .social-copyright-text
+    &-text
         color: var(--ft)
         font-size: 14px
-    .social-copyright__item
+    &__item
         display: flex
         gap: 30px
-        .social-copyright__item-link
+        &-link
             color: var(--ft)
             font-size: 14px
             transition: all .5s ease
             &:hover
                 color: var(--w)
                 transition: all .5s ease
-        

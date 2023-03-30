@@ -33,5 +33,12 @@ $(document).ready(function() {
           $(this).addClass('active');
         }
       });
-
+      $('.menu').on('click', function() {
+        $('.line-top, .line-bottom').toggleClass('active')
+        $('.mobile').toggleClass('active')
+      })
+      $('.close-btn').on('click', function() {
+        $('.line-top, .line-bottom').removeClass('active')
+        $('.mobile').removeClass('active')
+      })
 })
