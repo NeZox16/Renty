@@ -10,41 +10,41 @@
     .btn
         padding: 14px 22px
     .hero
-        .hero-right
+        &-right
             width: 430px 
-            .hero-right-wrapper
+            &-wrapper
                 .hero-right-title 
                     font-size: 45px 
                 .hero-right-text
                     font-size: 15px 
-            .hero-right-inner
-                .hero-right-inner-search
+            &-inner
+                &-search
                     width: 230px 
                     flex-direction: column 
                     gap: 15px
                     margin: 0 auto 
-                    .hero-right-inner-search-btn
+                    &-btn
                         margin: 0 auto
-            .hero-right-recognition
+            &-recognition
                 width: 430px 
-                .hero-right-recognition__item
-                    .hero-right-recognition__item-title
+                &__item
+                    &-title
                         font-size: 30px
-                    .hero-right-recognition__item-text
+                    &-text
                         font-size: 13px
 
             .location-inp-second
 
     /* SECOND */   
     .popular     
-        .popular-item
+        &-item
             width: 310px 
-            .popular-item__img
+            &__img
                 width: 100% 
-            .popular-item-inner
-                .popular-item-inner__apts
+            &-inner
+                &__apts
                     gap: 13px 
-                .popular-item-inner__price-text
+                &__price-text
                     font-size: 17px 
     /* THIRD */
     .third
@@ -52,30 +52,30 @@
             &-left
                 &-elipse
                     top: 15% 
-            .services-left-img
+            &-left-img
                 max-width: 530px 
-            .services-right
+            &-right
                 width: 380px 
     /* FOURTH */
     .benefits
-        .benefits-left
+        &-left
 
-        .benefits-right
-            .benefits-right-img
+        &-right
+            &-img
                 max-width: 430px 
-            .benefits-right-reviews
+            &-reviews
                 width: 335px 
                 padding: 10px 
-                .benefits-right-reviews-wrapper
-                    .benefits-right-reviews-wrapper-title
+                &-wrapper
+                    &-title
                         font-size: 20px 
-                    .benefits-right-reviews-wrapper__inner
-                        .benefits-right-reviews-wrapper__inner-quantity
+                    &__inner
+                        &-quantity
                             font-size: 11px 
-                .benefits-right-reviews-avatars
+                &-avatars
                     width: 140px
                     height: 48px
-                    .benefits-right-reviews-avatars__img
+                    &__img
                         width: 48px
                         &:nth-of-type(2) 
                             right: 60px
@@ -86,7 +86,7 @@
         .slick-list
             .slick-track
                 .new-wrapper__item
-                    .new-wrapper__item-img
+                    &-img
                         width: 335px
                 .new-wrapper__item.slick-slide
                     &-img
@@ -179,7 +179,7 @@
         background: var(--w)
         transition: all 1s ease
         z-index: 1
-        .mobile-nav
+        &-nav
             display: flex
             flex-direction: column
             align-items: center
@@ -187,14 +187,14 @@
             gap: 40px
             position: relative
             transition: all .5s ease
-            .mobile-nav-list
+            &-list
                 display: flex
                 align-items: center
                 flex-direction: column
                 gap: 40px
                 transition: all .5s ease
-                .mobile-nav-list__item
-                    .mobile-nav-list__item-link
+                &__item
+                    &-link
                         color: var(--bg-2)
                         transition: all .5s ease
                         padding: 13px
@@ -212,19 +212,19 @@
             flex-direction: column
             gap: 50px
             justify-content: center
-            .hero-left
+            &-left
                 z-index: -1
-            .hero-right
+            &-right
                 order: -1
                 display: grid
-                .hero-right-inner
-                    .hero-right-inner-search
+                &-inner
+                    &-search
                         width: 100%
         /* SECOND */   
     .popular
         flex-wrap: wrap
         gap: 45px
-        .popular-item
+        &-item
             border-radius: 14px
             -webkit-box-shadow: 8px 8px 24px 0px rgba(55, 55, 55, 1)
             -moz-box-shadow: 8px 8px 24px 0px rgba(55, 55, 55, 1)
@@ -236,33 +236,33 @@
             gap: 30px
             &-left
                 &-elipse
-            .services-left-img
-            .services-right
+            &-left-img
+            &-right
                 width: 500px
                 order: -1
     /* FOURTH */
     .benefits
         flex-direction: column
         gap: 30px
-        .benefits-left
+        &-left
 
-        .benefits-right
-            .benefits-right-img
+        &-right
+            &-img
                 max-width: 430px 
-            .benefits-right-reviews
+            &-reviews
                 width: 335px 
                 padding: 10px 
                 cursor: pointer
-                .benefits-right-reviews-wrapper
-                    .benefits-right-reviews-wrapper-title
+                &-wrapper
+                    &-title
                         font-size: 20px 
-                    .benefits-right-reviews-wrapper__inner
-                        .benefits-right-reviews-wrapper__inner-quantity
+                    &__inner
+                        &-quantity
                             font-size: 11px 
-                .benefits-right-reviews-avatars
+                &-avatars
                     width: 140px
                     height: 48px
-                    .benefits-right-reviews-avatars__img
+                    &__img
                         width: 48px
                         &:nth-of-type(1)
                             left: 10px
@@ -298,11 +298,11 @@
         display: none
     .first
         .hero
-            .hero-left
-                .hero-left__img
+            &-left
+                &__img
                     max-width: 420px
-            .hero-right
-                .hero-right-wrapper
+            &-right
+                &-wrapper
                     .hero-right-title
                         font-size: 40px
                     .hero-right-text
@@ -316,14 +316,14 @@
         .services
             &-left
                 &-elipse
-            .services-left-img
+            &-img
                 max-width: 450px
-            .services-right
+            &-right
                 width: 410px
                 .section_services 
                     .section-inner-text
                         font-size: 14px
-                .services-right__review
+                &__review
                     gap: 25px 16px
     /* SIXTH */
     .faq-wrapper
@@ -346,18 +346,18 @@
         display: none
     .first
         .hero
-            .hero-left
-                .hero-left__img
+            &-left
+                &__img
                     max-width: 420px
-            .hero-right
-                .hero-right-wrapper
+            &-right
+                &-wrapper
                     .hero-right-title
                         font-size: 35px
                     .hero-right-text
                         font-size: 13px
-                .hero-right-recognition 
-                    .hero-right-recognition__item
-                        .hero-right-recognition__item-title
+                &-recognition 
+                    &__item
+                        &-title
                             font-size: 26px
     /* SECOND */   
     .second
@@ -370,14 +370,14 @@
                 &-elipse
                     width: 352px
                     height: 352px
-            .services-left-img
+            &-left-img
                 max-width: 450px
-            .services-right
+            &-right
                 width: 410px
                 .section_services 
                     .section-inner-text
                         font-size: 14px
-                .services-right__review
+                &__review
                     gap: 25px 16px
     /* FIFTH */
     .slick-next.slick-arrow
@@ -421,28 +421,28 @@
         .hero-left-elipse
             display: none
         .hero
-            .hero-left
-                .hero-left__img
+            &-left
+                &__img
                     max-width: 100%
-            .hero-right
+            &-right
                 width: 100%
-                .hero-right-wrapper
+                &-wrapper
                     width: 100%
                     .hero-right-title
                         font-size: 35px
                     .hero-right-text
                         font-size: 13px
-                .hero-right-recognition
+                &-recognition
                     width: 100%
                     flex-wrap: wrap
                     gap: 30px
-                    .hero-right-recognition__item
-                        .hero-right-recognition__item-title
+                    &__item
+                        &-title
                             font-size: 26px
-                .hero-right-inner
-                    .hero-right-inner-search
+                &-inner
+                    &-search
                         flex-direction: column
-                        .hero-right-inner-search__first, .hero-right-inner-search__second
+                        &__first, &__second
                             gap: 6px
                             .select-first, .select-second
                                 &::before
@@ -450,7 +450,7 @@
                                     right: -5px
                             .location-inp, .location-inp-second
                                 width: 100%
-                        .hero-right-inner-search-btn
+                        &-btn
                             margin: 0
     /* SECOND */  
     .section-inner
@@ -464,9 +464,9 @@
         .popular-item
             &-inner
                 padding: 19px 15px 24px
-                .popular-item-inner__apts
-                    .popular-item-inner__apts-wrapper
-                        .popular-item-inner__apts-wrapper-text
+                &__apts
+                    &-wrapper
+                        &-text
                             font-size: 11px
     /* THIRD */
     .third
@@ -476,25 +476,25 @@
                 &-elipse
                     width: 100%
                     height: 100%
-            .services-left-img
+            &-left-img
                 max-width: 100%
-            .services-right
+            &-right
                 width: 100%
                 .section_services 
                     .section-inner-text
-                .services-right__review
+                &__review
                     grid-template-columns: 179px
     /* FOURTH */
     .benefits 
-        .benefits-right 
-            .benefits-right-img
+        &-right 
+            &-img
                 max-width: 100%
-            .benefits-right-reviews
+            &-reviews
                     width: 198px
                     left: 30px
                     bottom: 12px
                     flex-direction: column
-        .benefits-left
+        &-left
             .benefits_section
                 width: 100%
     /* FIFTH */
